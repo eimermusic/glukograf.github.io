@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/pico.indigo.min.css">
+    <script type="module" src="js/model-viewer.min.js"></script>
+    <style>
+      .section-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .section-hero > article {
+        max-width: 66.7%;
+      }
+
+      .hero-image, .feature-image {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 4px;
+        margin: 0 auto;
+      }
+
+      .story-block {
+        text-align: center;
+      }
+
+      model-viewer {
+        width: 100%;
+        height: 420px;
+        display: block;
+        border-radius: 8px;
+        background: var(--pico-card-background-color, var(--pico-background-color));
+      }
+
+      .model-hint {
+        display: block;
+        opacity: 0.8;
+        margin-bottom: 0.5rem;
+        text-align: center;
+        font-size: 0.5em;
+      }
+
+      @media (max-width: 600px) {
+        model-viewer {
+          height: 320px;
+        }
+      }
+    </style>
+    <title>Hello world!</title>
+  </head>
+  <body>
+
+    <header class="site-header">
+      <div class="container">
+        <nav>
+          <ul>
+            <li>
+              <h1>
+                <a href="#" class="site-logo">Glukograf</a>
+              </h1>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#bestall" role="button">Köp snart</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  
+    <main class="container">
+      <section class="section section-hero animate-on-scroll in-view">
+            <article>
+              <!-- <h1>Glukograf</h1> -->
+              <p class="hero-tagline">Det blir lätt tjatigt att behöva plocka fram mobilen varje gång man vill kolla blodsockret.</p>
+              <p class="hero-support">Vid frukosten, innan träningen, eller mitt i natten.</p>
+              <p class="hero-tagline">Glukograf visar kontinuerligt dina CGM-värden från Dexcom Share. En dedikerad skärm för blodsockret, så du slipper ta fram telefonen i onödan.</p>
+              <p class="hero-features">Dexcom-värde · trendpilar · historik-graf</p>
+              <a href="#funktioner" class="button button-primary">Läs mer</a>
+            </article>
+      </section>
+    
+      <section class="section section-features animate-on-scroll" id="funktioner">
+          <h2 class="product-family-heading">Två varianter—samma Glukograf</h2>
+          <div class="grid product-variant">
+            <div>
+              <model-viewer
+                src="images/3d/glukograf-2in-oled.glb"
+                alt="3D-modell av Glukograf OLED"
+                camera-controls
+                camera-orbit="-35deg 75deg 1m"
+                touch-action="pan-y"
+                shadow-intensity="0.8"
+                exposure="1.0"
+                loading="lazy"
+              ></model-viewer>
+              <small class="model-hint">Tips: dra för att rotera, scrolla för att zooma.</small>
+              <h3>Glukograf — OLED</h3>
+              <p>USB-driven, för nattduksbordet. OLED-skärmen på 1,9 tum har ingen bakbelysning och ett avsiktligt tunt och lättläst typsnitt—den lyser inte upp sovrummet men är ändå tydligt läsbar. Med touch-knappen kan du enkelt byta mellan nuvarande GB värde, historisk graf och ljusinstllning för skärmen.</p>
+              <p class="variant-colors">Tillgänglig som vit *, pistagegrön, och svart.</p>
+              <p class="variant-colors">* Efterliknar vanlig varmvit väggfärg.</p>
+            </div>
+            <div>
+              <model-viewer
+                src="images/3d/glukograf_e-paper.glb"
+                alt="3D-modell av Glukograf E-papper"
+                camera-controls
+                camera-orbit="35deg 75deg 1m"
+                touch-action="pan-y"
+                shadow-intensity="0.8"
+                exposure="1.0"
+                loading="lazy"
+              ></model-viewer>
+              <small class="model-hint">Tips: dra för att rotera, scrolla för att zooma.</small>
+              <h3>Glukograf — E-papper</h3>
+              <p>Väggmonterad, batteridriven pappersliknande skärm på hela 4,7 tum som syns lika tydligt som allt annat i normalt rumsljus utan att lysa och ta uppmärksamhet i inödan. Batteriet behöver laddas max varannan vecka och laddas via USB-C.</p>
+              <p class="variant-colors">Tillgänglig som vit *, pistagegrön, och svart.</p>
+              <p class="variant-colors">* Efterliknar vanlig varmvit väggfärg.</p>
+            </div>
+          </div>
+      </section>
+ 
+      <section class="grid section-story animate-on-scroll">
+        <article>
+          <p class="story-block">Glukograf utvecklas av en förälder till ett barn med typ 1-diabetes — som till vardags jobbar som produktdesigner och mjukvaruutvecklare. Enheterna är resultatet av flera års utveckling och förbättringar. Den första prototypen byggdes 2021 och konceptet har förfinats genom daglig användning sedan dess — vid sängen (OLED) och på väggen (e-papper).</p>
+        </article>
+      </section>
+
+      <section class="section section-cta animate-on-scroll" id="bestall">
+          <div class="grid">
+            <div style="text-align: center;">
+              <h2>Glukograf beta-testas fortfarande</h2>
+              <p>Kontakta mig för att visa ditt intresse och få reda på när du kan köpa din Glukograf.</p>
+              <a href="mailto:kontakt@glukograf.se" class="button button-primary">Hör av dig</a>
+            </div>
+          </div>
+      </section>
+    </main>
+  
+    <footer class="site-footer">
+        <div class="grid">
+          <div>
+            <p><a href="mailto:kontakt@glukograf.se">Kontakt</a> · <a href="#integritet">Integritetspolicy</a></p>
+            <p>© 2025-2026 Glukograf</p>
+          </div>
+        </div>
+    </footer>
+  
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
